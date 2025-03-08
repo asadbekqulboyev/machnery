@@ -1,0 +1,310 @@
+@media (max-width: 1440px){
+  .container{
+    max-width: 1350px;
+  }
+  .choose .item_text{
+    padding-left: 112px;
+  }
+}
+@media (max-width: 1280px){
+  .container{
+    max-width: 100%;
+    padding: 0 30px;
+  }
+  .header .header_logo{
+    width: 120px;
+  }
+  .header .header_left .header_menu a{
+    font-size: 22px;
+  }
+  .header .order_btn{
+    font-size: 20px;
+  }
+  .choose .item_text{
+    padding-left: 102px;
+  }
+  .about{
+    padding-top: 91px;
+  }
+}
+@media (max-width: 1024px){
+  .header_hero{
+    padding: 20px 0 25px 0;
+  }
+  .mobile_menu_btn{
+    display: block;
+  }
+  .header .header_left .header_menu,.header  .header_right{
+    display: none;
+  }
+  .hero .hero_title{
+    font-size: 48px;
+  }
+  .hero .hero_text{
+    font-size: 24px;
+  }
+  .about{
+    padding: 80px 0;
+  }
+  .choose{
+    padding-bottom: 80px;
+  }
+  .choose_item .item_top{
+    gap: 0 42px;
+  }
+  .choose .item_text{
+    padding-left: 79px;
+  }
+  .we_work .we_work_left{
+    width: 54%;
+  }
+  .we_work .we_work_right{
+    width: 46%;
+  }
+  .about_stats .section_title{
+    font-size: 16px;
+  }
+  .choose .item_title{
+    font-size: 24px;
+  }
+  .portfolio{
+    padding-bottom: 80px;
+  }
+  .select{
+    padding: 80px 0;
+  }
+  .portfolio .project_name{
+    font-size: 18px;
+  }
+  .faq .accordion-button::after,.select .accordion-button::after{
+    width: 40px;
+    height: 20px;
+  }
+  .select .accordion-button{
+    font-size: 24px;
+  }
+  .select .accordion-button img{
+    width: 61px;
+    height: 61px;
+  }
+  .faq .accordion-button span{
+    margin-right: 82px;
+  }
+}
+@media (max-width: 768px){
+  .header_hero{
+    height: auto;
+    background-position: center top;
+    background-size: auto;
+    padding-bottom: 100px;
+  }
+  header{
+    margin-bottom: 840px;
+  }
+  .hero .hero_title{
+    font-size: 34px;
+  }
+  .about .we_work{
+    flex-direction: column;
+  }
+  .we_work .we_work_left, .we_work .we_work_right{
+    width: 100%;
+  }
+  .we_work .we_work_right{
+    margin-top: 20px;
+  }
+  .choose .item_text{
+    padding-left: 0;
+  }
+  .mobile_menu{
+    padding-top: 150px;
+  }
+
+  .footer_top{
+    flex-direction: column;
+    gap: 40px 0;
+    text-align: center;
+  }
+  footer .footer_bottom{
+    flex-direction: column;
+    gap: 20px 0;
+  }
+  .portfolio .portfolio_item{
+    width: 100%;
+  }
+  .portfolio .portfolio_item:nth-child(4),
+  .portfolio .portfolio_item:nth-child(5){
+    width: 100%;
+  }
+  .footer_top .footer_top_left{
+    align-items: center;
+  }
+  .portfolio .project_name{
+    color: #333;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .faq .accordion-flush .accordion-item .accordion-button,.select .accordion-button{
+    font-size: 24px;
+  }
+  .select .accordion-button::after{
+    width: 40px;
+    height: 20px;
+  }
+  .faq .accordion-button span{
+    margin-right: 20px;
+  }
+}
+@media (max-width: 480px){
+  .container{
+    padding: 0 10px;
+  }
+  .mobile_menu{
+    padding-left: 10px;
+    padding-top: 120px;
+  }
+  header{
+    background: rgba(249, 249, 249, 0.50);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .header_hero{
+    padding-top: 0;
+  }
+  .header .header_logo{
+    width: 100px;
+  }
+  .hero{
+    padding-top: 900px;
+  }
+  .header_hero{
+    padding-bottom: 30px;
+  }
+  .about_stats .section_title{
+    width: 100%;
+  }
+  .we_work .we_work_right{
+    margin-top: 40px;
+  }
+  .we_work .we_work_right img{
+    width: calc(100% + 20px);
+    margin-left: -10px;
+  }
+  .about .we_work_big_title{
+    font-size: 24px;
+  }
+  .choose .item_title{
+    font-size: 18px;
+  }
+  .faq .accordion-flush .accordion-item .accordion-button, .select .accordion-button{
+    font-size: 16px;
+  }
+  .faq .accordion-button span{
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  .faq .accordion-button::after{
+    width: 30px;
+    height: 15px;
+  }
+  .select .section_title{
+    font-size: 22px;
+  }
+  .select .accordion-button img{
+    width: 50px;
+    height: 50px;
+  }
+  .select .accordion-button{
+    padding: 0;
+  }
+  .portfolio .portfolio_item .item_image > img{
+    height: 418px;
+    object-fit: cover;
+  }
+  .select .accordion-button::after{
+    width: 30px;
+    height: 15px;
+  }
+  .modal-content{
+    padding: 40px 10px;
+    margin: 0 10px;
+  }
+  .modal.show .modal-dialog{
+    margin-left: 0;
+  }
+}
+@media (max-width: 320px){
+  .mobile_menu .header_menu a{
+    font-size: 28px;
+  }
+  .header .mobile_menu .order_btn{
+    font-size: 28px;
+  }
+  .mobile_menu .social_links{
+    flex-wrap: wrap;
+  }
+  .header .mobile_menu .location{
+    font-size: 16px;
+  }
+  .mobile_menu{
+    padding-top: 60px;
+  }
+  .close_menu{
+    top: 18px;
+    right: 10px;
+  }
+  .about .we_work_big_title{
+    font-size: 18px;
+  }
+  .choose{
+    display: none;
+  }
+
+  .portfolio .portfolio_item .item_image > img{
+    height: 251px;
+  }
+  .portfolio .project_name{
+    font-size: 16px;
+  }
+  .portfolio .item_image{
+    margin-bottom: 10px;
+  }
+  .portfolio_items{
+    gap: 10px;
+  }
+  .portfolio .portfolio_item .portfolio_icon{
+    width: 30px;
+    height: 30px;
+  }
+  .portfolio .more_info, .portfolio .more_info a{
+    font-size: 16px;
+  }
+  .faq .accordion-button span{
+    margin-right: 10px;
+  }
+  .select .accordion-flush .accordion-item .accordion-button{
+    gap: 0 10px;
+  }
+  .select .accordion-button img{
+    width: 30px;
+    height: 30px;
+  }
+  footer .footer_top_center{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  footer .footer_bottom{
+    text-align: center;
+  }
+  .modal.show .modal-dialog{
+    margin-left: 0;
+  }
+
+  
+}
