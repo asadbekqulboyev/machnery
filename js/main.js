@@ -16,4 +16,48 @@ $(document).ready(function () {
     //         $("#exampleModal").modal("show"); // Modalni ochish
     //     });
     // });
+    $('.mobile_hamburger').click(function (e) { 
+        e.preventDefault();
+        $(this).toggleClass('active');
+        $('.header_menu').toggleClass('active')
+    });
+    // PRODUCTION PAGE
+   const slides =  new Swiper('.slide_items', {
+        
+        spaceBetween:8,
+        // breackpoint:{
+        //     0:{
+        //         slidesPerView:1,
+        //     },
+        //     768:{
+        //         slidesPerView:2.5,
+        //     },
+        //     992:{
+        //         slidesPerView:2.9,
+        //     },
+        //     1424:{
+        //         slidesPerView:3.25,
+        //     }
+        // }
+        loop: true,
+        fade:true,
+        autoplay: {
+            delay: 5000, 
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 1.5,
+            },
+            992: {
+                slidesPerView: 2.3,
+            },
+            1424: {
+                slidesPerView: 3.25,
+            }
+        }
+    })
+    
 })
