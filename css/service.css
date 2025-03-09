@@ -1,0 +1,123 @@
+.service {}
+
+.service .hero .hero_content {
+    padding: 302px 64px 300px;
+    border-radius: 12px;
+    background: linear-gradient(247deg, #4946D4 0%, #20031A 87.79%);
+}
+
+@media (max-width:768px) {
+    .service .hero .hero_content {
+        padding: 185px 16px 184px;
+    }
+}
+
+.service .team_count .team_subtitle {
+    max-width: 678px;
+}
+
+.service .catalog .section_title {
+    text-align: left;
+}
+
+.service .catalog_subtitle {
+    text-align: left;
+}
+.catalog {
+    padding-top: 140px;
+}
+@media (max-width:768px) {
+    .catalog {
+        padding-top: 80px;
+    }  
+}
+.catalog .catalog_items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+@media (max-width:768px) {
+    .catalog .catalog_items {
+        flex-wrap:nowrap;
+        gap: 0px;
+    }
+      
+}
+.catalog .card {
+    width: calc(33.333% - 8px);
+    padding: 32px;
+    border: 2px solid transparent;
+    background: #f9f9f9;
+    transition: border-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 54px;
+}
+@media (max-width:1200px) {
+    .catalog .card {
+        gap: 24px;
+    }
+}
+@media (max-width:992px) {
+    .catalog .card {
+      width: calc(50% - 8px);
+    }
+}
+@media (max-width:768px) {
+    .catalog .card {
+      width:auto;
+      padding: 16px;
+      gap: 40px;
+    }
+}
+.catalog .card img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.catalog .card h3 {
+    color: rgba(0, 0, 0, 0.90);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.27px;
+}
+@media (max-width:768px) {
+    .catalog .card h3{
+        font-size: 14px;
+    }
+}
+.catalog .card p {
+    color: rgba(105, 105, 105, 0.95);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.27px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+@media (max-width:768px) {
+    .catalog .card p{
+        font-size: 16px;
+        margin-top: 8px;
+    }
+}
+
+.catalog .card:hover{
+    border-color: rgba(12, 53, 167, 0.80);
+}
+
+.catalog .swiper-container {
+    width: 100%;
+}
+
+.catalog .swiper-slide {
+    display: flex;
+    justify-content: center;
+}

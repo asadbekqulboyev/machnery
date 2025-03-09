@@ -59,5 +59,46 @@ $(document).ready(function () {
             }
         }
     })
-    
+
+    // catalog slider
+     
+        let swiper;
+            function initSwiper() {
+                if ($(window).width() <= 768) {
+                    if (!$('#catalog_slider').hasClass('swiper-container')) {
+                        $('#catalog_slider').addClass('swiper-container');
+                        $('#catalog_items').addClass('swiper-wrapper');
+                        $('.card').addClass('swiper-slide');
+
+                        swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 1.2,
+                            spaceBetween: 10,
+                            loop: true,
+                            pagination: {
+                                el: ".swiper-pagination",
+                                clickable: true,
+                            },
+                        });
+
+                        // Swiper pagination qo'shish
+                        $('#catalog_slider').append('<div class="swiper-pagination"></div>');
+                    }
+                } else {
+                    if ($('#catalog_slider').hasClass('swiper-container')) {
+                        swiper.destroy(true, true);
+                        $('#catalog_slider').removeClass('swiper-container');
+                        $('#catalog_items').removeClass('swiper-wrapper');
+                        $('.card').removeClass('swiper-slide');
+                        $('.swiper-pagination').remove();
+                    }
+                }
+            }
+
+            $(window).on('resize', initSwiper);
+            initSwiper();
+    const resize_catalog = new Swiper('#catalog_sliders',{
+        slidesPerView:1.2,
+        spaceBetween:10
+    })
+
 })

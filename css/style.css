@@ -1,4 +1,5 @@
 @import './production.css';
+@import './service.css';
 
 * {
   padding: 0;
@@ -504,6 +505,10 @@ header .header_right select {
 .section_title span {
   color: #E8B262;
 }
+.section_title span.blue {
+  color: #254982;
+}
+
 
 .title_bottom {
   color: #222220;
@@ -1082,6 +1087,9 @@ main {
 /* team_count */
 .team_count {
   padding-top: 140px;
+}
+.team_count.first{
+  padding-top: 0;
 }
 
 @media (max-width:768px) {
