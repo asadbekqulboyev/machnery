@@ -115,23 +115,35 @@ $(document).ready(function () {
                             $('.swiper-pagination').remove();
                         }
         }
-        }
+    }
     $(window).on('resize', initSwiper);
     initSwiper();
-
     $(window).on('resize', initSwiper2);
     initSwiper2();
-
     const resize_catalog = new Swiper('#catalog_sliders',{
         slidesPerView:1.1,
         spaceBetween:10
     })
     
-
     let swip = new Swiper('#category_slides',{
         slidesPerView:1.1,
         spaceBetween:10
     }) 
+    // gallery
+    let gallery_slider = new Swiper('.gallery_content',{
+        spaceBetween:8,
+        breakpoints:{
+            0:{
+                slidesPerView:2.1
+            },
+            768:{
+                slidesPerView:2.5
+            },
+            992:{
+                slidesPerView:3.1
+            }
+        }
+    })
     // contact page 
     // var input = $("#phone");
     // var countryBtn = $("#country-btn");
