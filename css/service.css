@@ -6,6 +6,7 @@
     background: linear-gradient(247deg, #4946D4 0%, #20031A 87.79%);
 }
 
+
 @media (max-width:768px) {
     .service .hero .hero_content {
         padding: 185px 16px 184px;

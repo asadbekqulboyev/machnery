@@ -1720,6 +1720,10 @@ main {
 padding: 119px 64px;
 background: linear-gradient(247deg, #3681AE 0%, #020126 87.79%);
 }
+.subcategory .hero .hero_content{
+  padding: 106px 64px;
+background: linear-gradient(247deg, #A4C6FF 0%, #020126 87.79%);
+  }
 @media (max-width:768px) {
   .category .hero .hero_content{
     padding: 114px 16px;
