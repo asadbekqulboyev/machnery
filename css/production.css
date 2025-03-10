@@ -2,7 +2,7 @@
     background: linear-gradient(247deg, #D49B46 0%, #020126 87.79%);
     padding: 302px 30px 300px 64px;
 }
-.production .slide_items{
+.slide_items{
     margin-top: 40px;
     position: relative;
 }
@@ -31,21 +31,21 @@
     height: 100%;
 }
 
-.production .slide_items .slide_img {
+.slide_items .slide_img {
     width: 100%;
 }
 
-.production .slide_items .slide_img img {
+.slide_items .slide_img img {
     width: 100%;
     object-fit: contain;
 }
 
-.production .slide_item .slide_info {
+.slide_item .slide_info {
     margin-top: 24px;
     height: 100%;
 }
 @media (max-width:768px) {
-    .production .slide_item .slide_info {
+ .slide_item .slide_info {
         margin-top: 16px;
         height: 100%;
     }
@@ -53,7 +53,7 @@
 .production .swiper-slide{
     height: 100%;
 }
-.production .slide_item .slide_item_title {
+.slide_item .slide_item_title {
     color: rgba(34, 34, 32, 0.90);
     font-size: 22px;
     font-style: normal;
@@ -73,7 +73,7 @@ text-align: left;
         margin-top: 12px;
 
     }
-    .production .slide_item .slide_item_title {
+.slide_item .slide_item_title {
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
@@ -91,7 +91,7 @@ text-align: left;
         display: none;
     }
 }
-.production .slide_item .slide_subtitle {
+.slide_item .slide_subtitle {
     margin-top: 8px;
     color: #E8B262;
     font-size: 14px;
@@ -102,13 +102,13 @@ text-align: left;
     text-transform: uppercase;
 }
 @media (max-width:768px) {
-    .production .slide_item .slide_subtitle{
+.slide_item .slide_subtitle{
         font-size: 12px;
         margin-top: 8px;
     }
 }
 
-.production .slide_item .slide_description {
+.slide_item .slide_description {
     color: rgba(105, 105, 105, 0.95);
     font-size: 16px;
     font-style: normal;
@@ -123,7 +123,7 @@ text-align: left;
         margin-top: 8px;
     } 
 }
-.production .slide_item .blue_btn{
+.slide_item .blue_btn{
     margin-top: 24px;
     margin-bottom: 0;
 }
@@ -132,7 +132,7 @@ text-align: left;
     .production .hero .hero_content {
         padding: 192px 50px 190px 34px;
     }
-    .production .slide_item .blue_btn{
+    .slide_item .blue_btn{
         margin-top: 16px;
     }
 }

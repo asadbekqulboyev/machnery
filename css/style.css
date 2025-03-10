@@ -1,5 +1,6 @@
 @import './production.css';
 @import './service.css';
+@import './reques.css';
 
 * {
   padding: 0;
@@ -1681,3 +1682,99 @@ main {
 
   }
 }
+.contact_form{
+  margin-top: 140px;
+}
+.contact_form .forms{
+  padding: 64px;
+  border-radius: 12px;
+  border: 1px dashed rgba(0, 0, 0, 0.20);
+  background: #FFF;
+}
+.contact_form #country-btn {
+  border: none;
+  background: none;
+  font-weight: bold;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.contact_forms .iti {
+  width: 100%;
+}
+.contact_form .custom-phone-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  width: 280px;
+  background: #f8f8f8;
+}
+.contact_form .custom-phone-input input{
+  width: 100%;
+  border: 0;
+  outline: 0;
+}
+.category .hero .hero_content{
+padding: 119px 64px;
+background: linear-gradient(247deg, #3681AE 0%, #020126 87.79%);
+}
+@media (max-width:768px) {
+  .category .hero .hero_content{
+    padding: 114px 16px;
+  }
+}
+.category .hero .hero_content .title_top{
+text-align: left;
+color: #88A4CA;
+}
+.category .hero .hero_content::before{
+display: none;
+}
+@media (max-width:768px) {
+  .category .hero_content p{
+    text-align: left;
+  }
+
+}
+.category .slide_content{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 37px 6px;
+}
+@media (max-width:768px) {
+  .category .slide_content{
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+}
+.category .slide_content .slide_item{
+width: calc(33.33% - 4px);
+}
+@media (max-width:1220px) {
+  .category .slide_content .slide_item{
+    width: calc(50% - 4px);
+  }
+}
+.category .slide_content .slide_item img{
+width: 100%;
+object-fit: contain;
+}
+@media (max-width:992px) {
+  .category .slide_content .slide_item .slide_item_title{
+    font-size: 18px;
+    }
+    .category .slide_content .slide_item .slide_subtitle{
+      font-size: 14px;
+    }
+}
+@media (max-width:390px) {
+  .category .slide_content .slide_item .slide_item_title{
+    font-size: 15px;
+    }
+    .category .slide_content .slide_item .slide_subtitle{
+      font-size: 10px;
+    }
+}
+
