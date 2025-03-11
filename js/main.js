@@ -170,11 +170,36 @@ $(document).ready(function () {
         countryList.hide(100);
     });
 
-    // $(document).click(function (e) {
-    //     if (!$("#country-btn").is(e.target) && !countryList.is(e.target) && countryList.has(e.target).length === 0) {
-    //         countryList.hide();
-    //     }
+    
+    $(".accardion_header").on("click", function () {
+        let item = $(this).parent(); 
+        let body = $(this).next(".accardion_description");
+        if (item.hasClass("active")) {
+            item.removeClass("active");
+        } else {
+            $(".accardion_item").removeClass("active"); 
+            item.addClass("active");
+        }
+    });
+    // let items = $(".accardion_item");
+    // let index = 0;
+
+    // function changeActiveItem(next = true) {
+    //     items.removeClass("active").eq(index).addClass("active");
+
+    //     let targetImg = items.eq(index).data("target");
+    //     $(".accardion_img").removeClass("active").fadeOut(500);
+    //     $(`.accardion_img img"${targetImg}`).addClass("active").fadeIn(500);
+
+    //     index = (index + 1) % items.length;
+    // }
+
+    // $(".accardion_header").on("click", function () {
+    //     index = $(this).parent().index();
+    //     changeActiveItem(false);
     // });
+
+    // setInterval(changeActiveItem, 7000);
 });
     
 
