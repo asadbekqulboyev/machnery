@@ -145,25 +145,35 @@ $(document).ready(function () {
         }
     })
     // contact page 
-    // var input = $("#phone");
-    // var countryBtn = $("#country-btn");
+    let phoneInput = $("#phone");
+    let countryBtn = $("#country-btn span:first-child"); // Faqat kod o'zgaradi
+    let countryList = $("#country-list");
 
-    // var iti = window.intlTelInput(input[0], {
-    //     initialCountry: "kz", // Standart davlat
-    //     separateDialCode: true, // Kod inputdan ajratiladi
-    //     nationalMode: false, // To'liq format
-    //     utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/utils.js"
-    // });
+    function applyMask(mask, placeholder, code) {
+        phoneInput.val("").attr("placeholder", placeholder).inputmask(mask);
+        countryBtn.text(code); // Tugmachadagi mamlakat kodini yangilash
+    }
 
-    // // "KZ" tugmasi bosilganda davlatlar ro‘yxatini ochish
-    // countryBtn.on("click", function () {
-    //     $(".iti__flag-container").onclick(); // **Davlatlar ro'yxatini ochish**
-    // });
+    // Boshlang'ich maska (Qozog‘iston)
+    applyMask("+7 999 999 99 99", "+7 771 000 9998", "KZ");
 
-    // // Davlat kodi o‘zgarganda tugmadagi matnni yangilash
-    // input.on("countrychange", function () {
-    //     var countryData = iti.getSelectedCountryData();
-    //     countryBtn.text(countryData.iso2.toUpperCase() + " ▾"); // Masalan: "RU ▾", "US ▾", "UZ ▾"
+    $("#country-btn").click(function () {
+        countryList.slideToggle();
+    });
+
+    countryList.on("click", "li", function () {
+        let code = $(this).data("code");
+        let mask = $(this).data("mask");
+        let placeholder = $(this).data("placeholder");
+
+        applyMask(mask, placeholder, code);
+        countryList.hide(100);
+    });
+
+    // $(document).click(function (e) {
+    //     if (!$("#country-btn").is(e.target) && !countryList.is(e.target) && countryList.has(e.target).length === 0) {
+    //         countryList.hide();
+    //     }
     // });
 });
     

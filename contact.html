@@ -74,11 +74,10 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="contact">
       <section class="hero">
         <div class="container">
           <div class="hero_content">
-            <div class="hero_logo"><img src="images/hero_logo.svg" alt=""></div>
             <h1 class="hero_title">MEG: ОТ ТРАДИЦИЙ ДО ИННОВАЦИЙ<br>
               <span>AES MACHINERY ENGINEERING GROUP</span>
             </h1>
@@ -150,23 +149,21 @@
                   <h2 class="section_title">
                     Свяжитесь с нами!
                   </h2>
-                  <p class="cpntact_form_dscription">
+                  <p class="form_description">
                     Мы уверены в своих силах и всегда стремимся к безупречному результату.
                   </p>
                 </div>
-
                 <div class="form_item">
                   <h3 class="title_form">
                     Контакты:
                   </h3>
                   <ul>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
+                    <li><a href="tel:+77011858038">+7 (701) 185 80 38</a></li>
+                    <li><a href="tel:+77272528621">+7 (727) 252-86-21</a></li>
+                    <li><a href="mailto:aesenergo@mail.ru">aesenergo@mail.ru</a></li>
+                    <li><a href="#">050030, РК, г. Алматы, Турксибский район, Суюнбая 481E.</a></li>
                   </ul>
                 </div>
-
               </div>
               <form action="" class="form">
                 <label>
@@ -192,12 +189,41 @@
                     Номер телефона*
                   </div>
                   <div class="custom-phone-input">
-                    <button type="button" id="country-btn">KZ ▾</button>
+                    <span id="country-btn"><span>KZ</span>  <span>▾</span></span>
                     <input type="tel" id="phone" placeholder="+7 771 000 9998">
                 </div>
-                  
+                <ul id="country-list">
+                  <li data-code="ru" data-mask="+7 999 999 99 99" data-placeholder="+7 911 123 45 67">RU (Россия)</li>
+                  <li data-code="kz" data-mask="+7 999 999 99 99" data-placeholder="+7 771 000 9998">KZ (Қазақстан)</li>
+                  <li data-code="gb" data-mask="+44 9999 999999" data-placeholder="+44 1234 567890">GB (United Kingdom)</li>
+                  <li data-code="uz" data-mask="+998 99 999 99 99" data-placeholder="+998 90 123 45 67">UZ (Oʻzbekiston)</li>
+                  <li data-code="tr" data-mask="+90 999 999 99 99" data-placeholder="+90 501 234 56 78">TR (Türkiye)</li>
+              </ul>
                 </label>
+                <label>
+                  <div class="form_title">
+                    Вопрос (комментарий)*
+                  </div>
+                  <textarea name="message" id="" placeholder="Опишите тут ваш вопрос."></textarea>
+                </label>
+                <label>
+                  <input type="checkbox" name="check" required >
+                  <span class="policy">Я согласен </span> <a href="#">с политикой сбора данных.</a>
+                </label>
+                <button class="blue_btn" type="submit">Отправить заявку</button>
               </form>
+            </div>
+            <div class="form_item mobile">
+              <h3 class="title_form">
+                Контакты:
+              </h3>
+              <ul>
+                <li><a href="tel:+77011858038">+7 (701) 185 80 38</a></li>
+                <li><a href="tel:+77272528621">+7 (727) 252-86-21</a></li>
+                <li><a href="mailto:aesenergo@mail.ru">aesenergo@mail.ru</a></li>
+                <li><a href="#">050030, РК, г. Алматы, Турксибский район, Суюнбая 481E.</a></li>
+              </ul>
+            </div>
             </div>
           </div>
         </div>
@@ -318,7 +344,7 @@
     <script src="libs/jquery-3.6.0.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.5.6/build/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.7/jquery.inputmask.min.js"></script>
 
     <script src="js/main.js"></script>
 </body>

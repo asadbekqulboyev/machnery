@@ -1,11 +1,14 @@
-.request{
 
-}
 .request .request_top .section_title{
 text-align: left;
 }
 .request .request_top p{
     text-align: left;
+}
+@media (max-width:768px) {
+    .request .request_top p br{
+     display: none;
+    }   
 }
 .request .request_items{
     margin-top: 24px;
