@@ -140,7 +140,7 @@ $(document).ready(function () {
                         }
         }
     }
-    function initSwiper2() {
+    function initSwiper3() {
         if ($(window).width() <= 768) {
         if (!$('#structure_content').hasClass('swiper-container')) {
                             $('#category_slides').addClass('swiper-container');
