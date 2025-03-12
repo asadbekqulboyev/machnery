@@ -140,10 +140,39 @@ $(document).ready(function () {
                         }
         }
     }
+    function initSwiper2() {
+        if ($(window).width() <= 768) {
+        if (!$('#structure_content').hasClass('swiper-container')) {
+                            $('#category_slides').addClass('swiper-container');
+                            $('.structure_items').addClass('swiper-wrapper');
+                            $('.structure_item').addClass('swiper-slide');
+                            swiper = new Swiper('.swiper-container', {
+                                slidesPerView: 1.1,
+                                spaceBetween: 10,
+                                loop: true,
+                                pagination: {
+                                    el: ".swiper-pagination",
+                                    clickable: true,
+                                },
+                            });
+                           
+        }
+         } else {
+                        if ($('#category_slides').hasClass('swiper-container')) {
+                            swiper.destroy(true, true);
+                            $('#catalog_slider').removeClass('swiper-container');
+                            $('#catalog_items').removeClass('swiper-wrapper');
+                            $('.slide_item').removeClass('swiper-slide');
+                            $('.swiper-pagination').remove();
+                        }
+        }
+    }
     $(window).on('resize', initSwiper);
     initSwiper();
     $(window).on('resize', initSwiper2);
     initSwiper2();
+    $(window).on('resize', initSwiper3);
+    initSwiper3();
     const resize_catalog = new Swiper('#catalog_sliders',{
         slidesPerView:1.1,
         spaceBetween:10
@@ -168,6 +197,25 @@ $(document).ready(function () {
             }
         }
     })
+    // structure_content 
+    let strukture = new Swiper('#structure_content',{
+        slidesPerView:1.1,
+        spaceBetween:8
+    })
+    let sertificate = new Swiper(
+        {
+            breakpoints:{
+                0:{
+                },
+                768:{
+                },
+                992:{
+                },
+                768:{
+                },
+            }
+        }
+    )
     // contact page 
     let phoneInput = $("#phone");
     let countryBtn = $("#country-btn span:first-child"); // Faqat kod o'zgaradi
@@ -195,16 +243,16 @@ $(document).ready(function () {
     });
 
     
-    $(".accardion_header").on("click", function () {
-        let item = $(this).parent(); 
-        let body = $(this).next(".accardion_description");
-        if (item.hasClass("active")) {
-            item.removeClass("active");
-        } else {
-            $(".accardion_item").removeClass("active"); 
-            item.addClass("active");
-        }
-    });
+    // $(".accardion_header").on("click", function () {
+    //     let item = $(this).parent(); 
+    //     let body = $(this).next(".accardion_description");
+    //     if (item.hasClass("active")) {
+    //         item.removeClass("active");
+    //     } else {
+    //         $(".accardion_item").removeClass("active"); 
+    //         item.addClass("active");
+    //     }
+    // });
 
     // let items = $(".accardion_item");
     // let index = 0;
@@ -225,6 +273,89 @@ $(document).ready(function () {
     // });
 
     // setInterval(changeActiveItem, 7000);
+
+    // $(".accardion_header").on("click", function () {
+    //     let item = $(this).parent(); 
+    //     let index = item.index(); // Tanlangan element indexini olish
+    //     let nextItem = $(".accardion_item").eq(index + 1); // Keyingi itemni olish
+    //     console.log(nextItem);
+    //     if (!item.hasClass("active")) {
+    //         $(".accardion_item").removeClass("active"); 
+    //         item.addClass("active");
+    //         $(".img_content .img").hide(); 
+    //         $(".img_content .img").eq(index).fadeIn();
+    
+    //         // 5 soniyadan keyin keyingi itemga o'tish
+    //         setTimeout(function () {
+    //             if (nextItem.length) {
+    //                 nextItem.find(".accardion_header").trigger("click"); // Keyingi elementni avtomatik bosish
+    //             }
+    //         }, 7000); 
+    //     }
+    // });
+      
+    
+    // $(".accardion_header").on("click", function () {
+    //     let item = $(this).parent(); 
+    //     let index = item.index(); // Tanlangan element indexini olish
+    //     let nextItem = $(".accardion_item").eq(index + 1); // Keyingi itemni olish
+    
+    //     if (!item.hasClass("active")) {
+    //         $(".accardion_item").removeClass("active"); 
+    //         item.addClass("active");
+    
+    //         // Barcha rasmlarni yashirish va faqat bitta rasmni fadeIn qilish
+    //         $(".img_content .img").hide(); 
+    //         $(".img_content .img").eq(index).fadeIn();
+    
+    //         // 5 soniyadan keyin keyingi itemga o'tish
+    //         setTimeout(function () {
+    //             if (nextItem.length) {
+    //                 nextItem.find(".accardion_header").trigger("click"); // Keyingi elementni avtomatik bosish
+    //             } else {
+    //                 $(".accardion_item").eq(0).find(".accardion_header").trigger("click"); // Yana boshidan boshlash
+    //             }
+    //         }, 7000); // 5 soniya
+    //     }
+    // });
+    let autoPlay; // Timeoutni saqlash uchun
+
+    function activateAccordion(index) {
+        let items = $(".accardion_item");
+        let images = $(".img_content .img");
+
+        if (items.length === 0) return; // Agar accordion bo'lmasa, chiqib ketish
+
+        let item = items.eq(index);
+        let nextIndex = (index + 1) % items.length; // Oxirgi bo‘lsa, boshidan boshlash
+
+        // Oldingi active classni olib tashlash va yangi active qo'shish
+        items.removeClass("active");
+        item.addClass("active");
+
+        // Barcha rasmlarni yashirib, faqat bitta rasmni ko‘rsatish
+        images.hide();
+        images.eq(index).fadeIn();
+
+        // Eski setTimeout ni to'xtatish
+        clearTimeout(autoPlay);
+
+        // Keyingi itemni 5 soniyadan keyin faollashtirish
+        autoPlay = setTimeout(function () {
+            activateAccordion(nextIndex);
+        }, 7000);
+    }
+
+    // Sahifa yangilanganda birinchi accordionni ishga tushirish
+    activateAccordion(0);
+
+    // Foydalanuvchi biron bir accordionni bossachi? 
+    $(".accardion_header").on("click", function () {
+        let index = $(this).parent().index();
+        activateAccordion(index); // Tanlangan joydan davom etadi
+    });
+       
+    
 });
     
 
