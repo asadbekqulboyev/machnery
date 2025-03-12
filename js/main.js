@@ -16,10 +16,34 @@ $(document).ready(function () {
     //         $("#exampleModal").modal("show"); // Modalni ochish
     //     });
     // });
+
+  
+    $(".dropdown_menu_btn").click(function(e){
+        e.preventDefault()
+        // $(this).toggleClass('active')
+        // $('.dropdown_menu_lists').fadeOut();
+        // $(this).next('.dropdown_menu_lists').slideToggle()
+
+        if(!$(this).hasClass('active')){
+            $(".dropdown_menu_btn").removeClass('active')
+            $('.dropdown_menu_lists').slideUp()
+            $(this).addClass('active')
+            $(this).next('.dropdown_menu_lists').slideDown()
+        }else{
+            $(this).removeClass('active')
+            $(this).next('.dropdown_menu_lists').slideUp()
+        }
+    })
     $('.mobile_hamburger').click(function (e) { 
         e.preventDefault();
         $(this).toggleClass('active');
         $('.header_menu').toggleClass('active')
+    });
+    $(document).click(function (e) {
+        if (!$(e.target).closest(".dropdown_menu_lists").length &&!$(e.target).closest(".dropdown_menu_btn").length) {
+            $(".dropdown_menu_lists").fadeOut();
+            $(".dropdown_menu_btn").removeClass('active')
+        }
     });
     // PRODUCTION PAGE
     const slides =  new Swiper('.production .slide_items', {
@@ -181,6 +205,7 @@ $(document).ready(function () {
             item.addClass("active");
         }
     });
+
     // let items = $(".accardion_item");
     // let index = 0;
 
