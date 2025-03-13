@@ -183,39 +183,46 @@ $(document).ready(function () {
         spaceBetween:10
     }) 
     // gallery
-    let gallery_slider = new Swiper('.gallery_content',{
-        spaceBetween:8,
-        breakpoints:{
-            0:{
-                slidesPerView:2.1
-            },
-            768:{
-                slidesPerView:2.5
-            },
-            992:{
-                slidesPerView:3.1
-            }
-        }
-    })
-    // structure_content 
-    let strukture = new Swiper('#structure_content',{
-        slidesPerView:1.1,
-        spaceBetween:8
-    })
-    let sertificate = new Swiper(
-        {
+    if($('.gallery_content').length){
+        let gallery_slider = new Swiper('.gallery_content',{
+            spaceBetween:8,
             breakpoints:{
                 0:{
+                    slidesPerView:2.1
                 },
                 768:{
+                    slidesPerView:2.5
                 },
                 992:{
-                },
-                768:{
-                },
+                    slidesPerView:3.1
+                }
             }
-        }
-    )
+        })
+    }
+     if($('#sertficate_content').length){
+        let sertificate = new Swiper('#sertficate_content', {
+            spaceBetween: 8,
+            breakpoints: {
+                0: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView:2.5
+                },
+                992: {
+                    slidesPerView: 3.5
+                }
+            }
+        });
+    }
+    // structure_content 
+    // if($('#structure_content').length){
+    //     let strukture = new Swiper('#structure_content',{
+    //             slidesPerView:1.1,
+    //             spaceBetween:8
+    //     })
+    // }
+   
     // contact page 
     let phoneInput = $("#phone");
     let countryBtn = $("#country-btn span:first-child"); // Faqat kod o'zgaradi
@@ -241,121 +248,43 @@ $(document).ready(function () {
         applyMask(mask, placeholder, code);
         countryList.hide(100);
     });
-
-    
-    // $(".accardion_header").on("click", function () {
-    //     let item = $(this).parent(); 
-    //     let body = $(this).next(".accardion_description");
-    //     if (item.hasClass("active")) {
-    //         item.removeClass("active");
-    //     } else {
-    //         $(".accardion_item").removeClass("active"); 
-    //         item.addClass("active");
-    //     }
-    // });
-
-    // let items = $(".accardion_item");
-    // let index = 0;
-
-    // function changeActiveItem(next = true) {
-    //     items.removeClass("active").eq(index).addClass("active");
-
-    //     let targetImg = items.eq(index).data("target");
-    //     $(".accardion_img").removeClass("active").fadeOut(500);
-    //     $(`.accardion_img img"${targetImg}`).addClass("active").fadeIn(500);
-
-    //     index = (index + 1) % items.length;
-    // }
-
-    // $(".accardion_header").on("click", function () {
-    //     index = $(this).parent().index();
-    //     changeActiveItem(false);
-    // });
-
-    // setInterval(changeActiveItem, 7000);
-
-    // $(".accardion_header").on("click", function () {
-    //     let item = $(this).parent(); 
-    //     let index = item.index(); // Tanlangan element indexini olish
-    //     let nextItem = $(".accardion_item").eq(index + 1); // Keyingi itemni olish
-    //     console.log(nextItem);
-    //     if (!item.hasClass("active")) {
-    //         $(".accardion_item").removeClass("active"); 
-    //         item.addClass("active");
-    //         $(".img_content .img").hide(); 
-    //         $(".img_content .img").eq(index).fadeIn();
-    
-    //         // 5 soniyadan keyin keyingi itemga o'tish
-    //         setTimeout(function () {
-    //             if (nextItem.length) {
-    //                 nextItem.find(".accardion_header").trigger("click"); // Keyingi elementni avtomatik bosish
-    //             }
-    //         }, 7000); 
-    //     }
-    // });
-      
-    
-    // $(".accardion_header").on("click", function () {
-    //     let item = $(this).parent(); 
-    //     let index = item.index(); // Tanlangan element indexini olish
-    //     let nextItem = $(".accardion_item").eq(index + 1); // Keyingi itemni olish
-    
-    //     if (!item.hasClass("active")) {
-    //         $(".accardion_item").removeClass("active"); 
-    //         item.addClass("active");
-    
-    //         // Barcha rasmlarni yashirish va faqat bitta rasmni fadeIn qilish
-    //         $(".img_content .img").hide(); 
-    //         $(".img_content .img").eq(index).fadeIn();
-    
-    //         // 5 soniyadan keyin keyingi itemga o'tish
-    //         setTimeout(function () {
-    //             if (nextItem.length) {
-    //                 nextItem.find(".accardion_header").trigger("click"); // Keyingi elementni avtomatik bosish
-    //             } else {
-    //                 $(".accardion_item").eq(0).find(".accardion_header").trigger("click"); // Yana boshidan boshlash
-    //             }
-    //         }, 7000); // 5 soniya
-    //     }
-    // });
-    let autoPlay; // Timeoutni saqlash uchun
-
-    function activateAccordion(index) {
-        let items = $(".accardion_item");
-        let images = $(".img_content .img");
-
-        if (items.length === 0) return; // Agar accordion bo'lmasa, chiqib ketish
-
-        let item = items.eq(index);
-        let nextIndex = (index + 1) % items.length; // Oxirgi bo‘lsa, boshidan boshlash
-
-        // Oldingi active classni olib tashlash va yangi active qo'shish
-        items.removeClass("active");
-        item.addClass("active");
-
-        // Barcha rasmlarni yashirib, faqat bitta rasmni ko‘rsatish
-        images.hide();
-        images.eq(index).fadeIn();
-
-        // Eski setTimeout ni to'xtatish
-        clearTimeout(autoPlay);
-
-        // Keyingi itemni 5 soniyadan keyin faollashtirish
-        autoPlay = setTimeout(function () {
-            activateAccordion(nextIndex);
-        }, 7000);
-    }
-
-    // Sahifa yangilanganda birinchi accordionni ishga tushirish
-    activateAccordion(0);
-
-    // Foydalanuvchi biron bir accordionni bossachi? 
-    $(".accardion_header").on("click", function () {
-        let index = $(this).parent().index();
-        activateAccordion(index); // Tanlangan joydan davom etadi
-    });
-       
     
 });
-    
+let autoPlay; // Timeoutni saqlash uchun
+
+function activateAccordion(index) {
+    let items = $(".accardion_item");
+    let images = $(".img_content .img");
+
+    if (items.length === 0) return; // Agar accordion bo'lmasa, chiqib ketish
+
+    let item = items.eq(index);
+    let nextIndex = (index + 1) % items.length; // Oxirgi bo‘lsa, boshidan boshlash
+
+    // Oldingi active classni olib tashlash va yangi active qo'shish
+    items.removeClass("active");
+    item.addClass("active");
+
+    // Barcha rasmlarni yashirib, faqat bitta rasmni ko‘rsatish
+    images.hide();
+    images.eq(index).fadeIn();
+
+    // Eski setTimeout ni to'xtatish
+    clearTimeout(autoPlay);
+
+    // Keyingi itemni 5 soniyadan keyin faollashtirish
+    autoPlay = setTimeout(function () {
+        activateAccordion(nextIndex);
+    }, 7000);
+}
+
+// Sahifa yangilanganda birinchi accordionni ishga tushirish
+activateAccordion(0);
+
+// Foydalanuvchi biron bir accordionni bossachi? 
+$(".accardion_header").on("click", function () {
+    let index = $(this).parent().index();
+    activateAccordion(index); // Tanlangan joydan davom etadi
+});
+   
 
