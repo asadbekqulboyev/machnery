@@ -83,6 +83,16 @@ $(document).ready(function () {
             }
         }
     })
+    // about_products_slide
+    if($('#about_products_slide').length){
+        let about_products_slide = new Swiper('#about_products_slide',{
+            autoPlay:true,
+            loop:true,
+            autoplay: {
+                delay: 4000, 
+            },
+        })
+    }
     // catalog slider
     let swiper;
     function initSwiper() {
@@ -215,13 +225,14 @@ $(document).ready(function () {
             }
         });
     }
+
     // structure_content 
-    // if($('#structure_content').length){
-    //     let strukture = new Swiper('#structure_content',{
-    //             slidesPerView:1.1,
-    //             spaceBetween:8
-    //     })
-    // }
+    if($('#structure_content').length){
+        let strukture = new Swiper('#structure_content',{
+                slidesPerView:1.1,
+                spaceBetween:8
+        })
+    }
    
     // contact page 
     let phoneInput = $("#phone");
