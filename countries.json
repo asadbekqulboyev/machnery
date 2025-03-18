@@ -1,0 +1,237 @@
+[
+    {
+        "code": "AF",
+        "name": "Afghanistan",
+        "mask": "+93 99 999 9999"
+    },
+    {
+        "code": "AL",
+        "name": "Albania",
+        "mask": "+355 99 999 9999"
+    },
+    {
+        "code": "DZ",
+        "name": "Algeria",
+        "mask": "+213 99 999 9999"
+    },
+    {
+        "code": "AD",
+        "name": "Andorra",
+        "mask": "+376 999 999"
+    },
+    {
+        "code": "AO",
+        "name": "Angola",
+        "mask": "+244 999 999 999"
+    },
+    {
+        "code": "AR",
+        "name": "Argentina",
+        "mask": "+54 9 9999 9999"
+    },
+    {
+        "code": "AM",
+        "name": "Armenia",
+        "mask": "+374 99 999999"
+    },
+    {
+        "code": "AU",
+        "name": "Australia",
+        "mask": "+61 9 9999 9999"
+    },
+    {
+        "code": "AT",
+        "name": "Austria",
+        "mask": "+43 999 999999"
+    },
+    {
+        "code": "AZ",
+        "name": "Azerbaijan",
+        "mask": "+994 99 999 99 99"
+    },
+    {
+        "code": "BH",
+        "name": "Bahrain",
+        "mask": "+973 9999 9999"
+    },
+    {
+        "code": "BD",
+        "name": "Bangladesh",
+        "mask": "+880 9999 999999"
+    },
+    {
+        "code": "BY",
+        "name": "Belarus",
+        "mask": "+375 99 999 99 99"
+    },
+    {
+        "code": "BE",
+        "name": "Belgium",
+        "mask": "+32 999 99 99 99"
+    },
+    {
+        "code": "BJ",
+        "name": "Benin",
+        "mask": "+229 99 99 99 99"
+    },
+    {
+        "code": "BO",
+        "name": "Bolivia",
+        "mask": "+591 9 99999999"
+    },
+    {
+        "code": "BR",
+        "name": "Brazil",
+        "mask": "+55 99 99999 9999"
+    },
+    {
+        "code": "CA",
+        "name": "Canada",
+        "mask": "+1 999 999 9999"
+    },
+    {
+        "code": "CN",
+        "name": "China",
+        "mask": "+86 999 9999 9999"
+    },
+    {
+        "code": "EG",
+        "name": "Egypt",
+        "mask": "+20 99 999 9999"
+    },
+    {
+        "code": "FR",
+        "name": "France",
+        "mask": "+33 9 99 99 99 99"
+    },
+    {
+        "code": "DE",
+        "name": "Germany",
+        "mask": "+49 9999 999999"
+    },
+    {
+        "code": "IN",
+        "name": "India",
+        "mask": "+91 99999 99999"
+    },
+    {
+        "code": "IT",
+        "name": "Italy",
+        "mask": "+39 999 999 9999"
+    },
+    {
+        "code": "JP",
+        "name": "Japan",
+        "mask": "+81 99 9999 9999"
+    },
+    {
+        "code": "KZ",
+        "name": "Kazakhstan",
+        "mask": "+7 999 999 99 99"
+    },
+    {
+        "code": "KE",
+        "name": "Kenya",
+        "mask": "+254 999 999 999"
+    },
+    {
+        "code": "KR",
+        "name": "South Korea",
+        "mask": "+82 99 9999 9999"
+    },
+    {
+        "code": "MX",
+        "name": "Mexico",
+        "mask": "+52 99 9999 9999"
+    },
+    {
+        "code": "MY",
+        "name": "Malaysia",
+        "mask": "+60 99 999 9999"
+    },
+    {
+        "code": "NG",
+        "name": "Nigeria",
+        "mask": "+234 999 999 9999"
+    },
+    {
+        "code": "PK",
+        "name": "Pakistan",
+        "mask": "+92 999 9999999"
+    },
+    {
+        "code": "PH",
+        "name": "Philippines",
+        "mask": "+63 999 999 9999"
+    },
+    {
+        "code": "RU",
+        "name": "Russia",
+        "mask": "+7 999 999 99 99"
+    },
+    {
+        "code": "SA",
+        "name": "Saudi Arabia",
+        "mask": "+966 99 999 9999"
+    },
+    {
+        "code": "ZA",
+        "name": "South Africa",
+        "mask": "+27 99 999 9999"
+    },
+    {
+        "code": "ES",
+        "name": "Spain",
+        "mask": "+34 999 999 999"
+    },
+    {
+        "code": "SE",
+        "name": "Sweden",
+        "mask": "+46 999 999 9999"
+    },
+    {
+        "code": "CH",
+        "name": "Switzerland",
+        "mask": "+41 999 999 999"
+    },
+    {
+        "code": "TH",
+        "name": "Thailand",
+        "mask": "+66 99 999 9999"
+    },
+    {
+        "code": "TR",
+        "name": "Turkey",
+        "mask": "+90 999 999 99 99"
+    },
+    {
+        "code": "UA",
+        "name": "Ukraine",
+        "mask": "+380 99 999 99 99"
+    },
+    {
+        "code": "AE",
+        "name": "United Arab Emirates",
+        "mask": "+971 99 999 9999"
+    },
+    {
+        "code": "GB",
+        "name": "United Kingdom",
+        "mask": "+44 9999 999999"
+    },
+    {
+        "code": "US",
+        "name": "United States",
+        "mask": "+1 999 999 9999"
+    },
+    {
+        "code": "VN",
+        "name": "Vietnam",
+        "mask": "+84 999 999 999"
+    },
+    {
+        "code": "UZ",
+        "name": "Uzbekistan",
+        "mask": "+998 99 999 99 99"
+    }
+]

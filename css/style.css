@@ -352,7 +352,11 @@ header .header_right select {
   border: 1px solid transparent;
   transition: ease .3s all;
 }
-
+@media (max-width:768px) {
+  .blue_btn{
+    font-size: 12px;
+  }
+}
 .blue_btn:hover {
   border: 1px solid #254982;
   background-color: #fff;
@@ -413,7 +417,7 @@ header .header_right select {
 
 @media (max-width:992px) {
   .hero {
-    margin-bottom: 90px;
+    margin-bottom: 160px;
   }
 }
 
@@ -500,7 +504,6 @@ header .header_right select {
 
 .hero .hero_title {
   color: #FFF;
-  font-family: Inter;
   font-size: 46px;
   font-style: normal;
   font-weight: 700;
@@ -522,7 +525,7 @@ header .header_right select {
     font-style: normal;
     font-weight: 700;
     line-height: 110%;
-    letter-spacing: -1.4px;
+    letter-spacing: 0px;
   }
 }
 
@@ -575,7 +578,7 @@ header .header_right select {
 
 @media (max-width:768px) {
   .project {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 }
 
@@ -693,7 +696,7 @@ main {
 
 @media (max-width:768px) {
   .opportunity {
-    padding-top: 59px;
+    padding-top: 80px;
     margin-bottom: 0px;
   }
 
@@ -961,6 +964,7 @@ main {
 
 @media (max-width:768px) {
   .about {
+    padding-top: 160px;
     margin-bottom: 0;
   }
 }
@@ -1098,13 +1102,28 @@ opacity: .5;
 .advantages {
   padding-top: 70px;
 }
-
+@media (max-width:768px) {
+  .advantages {
+    padding-top: 160px;
+  }
+}
 .advantages_subtitle {
   max-width: 579px;
   margin: 0 auto;
   text-align: center;
 }
 
+@media (max-width:768px) {
+  .advantages_subtitle {
+    color: #222220;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.27px;
+  }
+}
 .advantages_items {
   margin-top: 40px;
   display: flex;
@@ -1115,6 +1134,7 @@ opacity: .5;
 
 @media (max-width:768px) {
   .advantages_items {
+    margin-top: 24px;
     gap: 19px;
   }
 }
@@ -1231,7 +1251,7 @@ opacity: .5;
 
 @media (max-width:768px) {
   .team_count {
-    padding-top: 80px;
+    padding-top: 160px;
   }
 }
 
@@ -1258,7 +1278,12 @@ opacity: .5;
 
 @media (max-width:768px) {
   .team_count .team_subtitle {
+    color: #222220;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+    letter-spacing: -0.27px;
   }
 }
 
@@ -1289,7 +1314,12 @@ opacity: .5;
 
   .team_intro_content .section_title {
     margin-bottom: 12px;
-    letter-spacing: -1px;
+    text-align: justify;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%;
+    letter-spacing: 0px;
   }
 
   .team_intro_content .section_title br {
@@ -1327,7 +1357,11 @@ opacity: .5;
 
 @media (max-width:768px) {
   .team_intro .team_description {
-    font-size: 14px;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; 
+letter-spacing: -0.27px;
   }
 }
 
@@ -1345,7 +1379,11 @@ opacity: .5;
   transition: all .3s linear;
   border: 1px solid transparent;
 }
-
+@media (max-width:768px) {
+  .team_intro .button {
+    font-size: 12px;
+  }
+}
 .team_intro .button:hover {
   color: #fff;
   background:transparent;
@@ -1366,7 +1404,7 @@ opacity: .5;
 
 @media (max-width:768px) {
   .news {
-    padding-top: 80px;
+    padding-top: 160px;
 
   }
 }
@@ -1516,7 +1554,9 @@ stroke: #254982;
   line-height: 140%;
   letter-spacing: -0.27px;
 }
-
+.posts .card_title {
+  font-size: 24px;
+}
 @media (max-width:768px) {
   .card_title {
     font-size: 14px;
@@ -1532,10 +1572,31 @@ stroke: #254982;
   max-width: 377px;
 }
 
+
 .about_products {
   margin-top: 140px;
 
 }
+@media (max-width:992px) {
+  .about_products {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width:768px) {
+  .about_products{
+    margin-top: 160px;
+  }
+  .card_description{
+    color: #222220;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+    letter-spacing: -0.27px;
+  }
+}
+
 .about_products .swiper-pagination-bullet {
   bottom: 20px;
   width: 14px;
@@ -1553,17 +1614,6 @@ stroke: #254982;
   background-color: #ddd;
 }
 
-@media (max-width:992px) {
-  .about_products {
-    margin-top: 100px;
-  }
-}
-
-@media (max-width:768px) {
-  .about_products {
-    margin-top: 80px;
-  }
-}
 
 .product_about_content {
   border-radius: 8px;
@@ -1618,7 +1668,9 @@ stroke: #254982;
 
 @media (max-width:768px) {
   .about_products .product_about_title {
-    font-size: 24px;
+    font-size: 22px;
+    letter-spacing: 0;
+    margin-top: 8px;
   }
 }
 
@@ -1651,6 +1703,11 @@ stroke: #254982;
   border: 1px solid transparent;
   color: #254982;
 }
+@media (max-width:768px) {
+  .about_products .button {
+    font-size: 12px;
+  }
+}
 
 .about_products .button:hover {
   background: transparent;
@@ -1667,7 +1724,7 @@ stroke: #254982;
 
 @media (max-width:768px) {
   .footer {
-    margin-top: 80px;
+    margin-top: 160px;
   }
 }
 
@@ -1881,7 +1938,7 @@ stroke: #254982;
 }
 @media (max-width:768px) {
   .contact_form {
-    margin-top: 80px;
+    margin-top: 160px;
   }
 }
 .contact_form .form_info{
@@ -1975,7 +2032,11 @@ cursor: pointer;
 width: fit-content;
 transform: scale(1.6);
 }
-
+@media (max-width:768px) {
+  .contact_form .form label:nth-child(6) input{
+    transform: scale(1.5);
+    }
+}
 .contact_form .form button[type=submit]{
 width: 100%;
 display: flex;
@@ -2294,6 +2355,7 @@ font-weight: 500;
   list-style: none;
   padding: 5px;
   border: 1px solid #fafafa;
+ 
 }
 .custom-phone-input {
   position: relative;
@@ -2349,8 +2411,17 @@ background: transparent;
   left: 0;
   z-index: 2;
   border-radius: 8px;
+  max-height: 400px;
+  overflow-y: auto;
 }
-
+#country-list::-webkit-scrollbar{
+  background: #d5d5d5;
+}
+#country-list::-webkit-scrollbar-thumb{
+  width: 4px;
+  background: #000;
+  border-radius: 16px;
+}
 #country-list li {
   padding: 10px 6px;
   cursor: pointer;
@@ -2453,6 +2524,7 @@ display: none;
   align-items: center;
   cursor: pointer;
 }
+
 @media (max-width:992px) {
   .accardion .accardion_item .accardion_header{
     font-size: 18px;
@@ -2494,6 +2566,16 @@ display: block;
 @media (max-width:768px) {
   .accardion .accardion_item .accardion_description{
     font-size: 14px;
+    
+  }
+  .accardion .accardion_top_info{
+    color: #222220;
+  text-align: justify;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; 
+  letter-spacing: -0.27px;
   }
 }
 .accardion .accardion_item.active .accardion_description::after{
@@ -2568,8 +2650,8 @@ object-fit: cover;
 }
 @media (max-width:768px) {
   .structure_top p{
-
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 140%;
   }
   .structure_top p br{
     display: none;
@@ -2652,12 +2734,18 @@ letter-spacing: -0.27px;
 @media (max-width:768px) {
   .structure_item .structure_description{
     margin-top: 8px;
+    color: #222220;
     font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; 
+    letter-spacing: -0.27px;
   }
 }
 .sertficate{
   margin-top: 140px;
 }
+
 .sertficate .sertficate_top h2,.sertficate .sertficate_top p{
 text-align: left;
 }
@@ -2691,10 +2779,12 @@ position: relative;
 }
 @media (max-width:768px) {
   .sertficate{
-    margin-top: 80px;
+    margin-top: 160px;
   }
   .sertficate .sertficate_top p {
-    font-size: 16px;
+    font-size: 14px;
+    letter-spacing: -0.27px;
+    line-height: 140%;  
     text-align: left;
   }
 .sertficate .sertficate_top p br{
@@ -2713,7 +2803,7 @@ position: relative;
 }
 @media (max-width:768px) {
   .company{
-    margin-top: 80px;
+    margin-top: 160px;
   }
 }
 .company .section_title,.company .company_description{
@@ -2722,6 +2812,7 @@ position: relative;
 @media (max-width:768px) {
   .company .company_description{
     font-size: 14px;
+    line-height: 140%;
   }
   .company .company_description br{
    display: none;

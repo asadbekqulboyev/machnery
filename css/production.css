@@ -38,6 +38,14 @@
 .slide_items .slide_img img {
     width: 100%;
     object-fit: contain;
+
+}
+@media (max-width:768px) {
+    .slide_items .slide_img img{
+        object-fit: cover;
+        border-radius: 8px;
+       max-height: 350px;
+    }  
 }
 
 .slide_item .slide_info {

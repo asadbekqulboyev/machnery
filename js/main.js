@@ -230,32 +230,71 @@ $(document).ready(function () {
     }
    
     // contact page 
-    let phoneInput = $("#phone");
-    let countryBtn = $("#country-btn span:first-child"); // Faqat kod o'zgaradi
+//     let phoneInput = $("#phone");
+//     let countryBtn = $("#country-btn span:first-child"); // Faqat kod o'zgaradi
+//     let countryList = $("#country-list");
+
+//     function applyMask(mask, placeholder, code) {
+//         phoneInput.val("").attr("placeholder", placeholder).inputmask(mask);
+//         countryBtn.text(code); // Tugmachadagi mamlakat kodini yangilash
+//     }
+
+//     // Boshlang'ich maska (Qozog‘iston)
+//     applyMask("+7 999 999 99 99", "+7 771 000 9998", "KZ");
+
+//     $("#country-btn").click(function () {
+//         countryList.slideToggle();
+//     });
+
+//     countryList.on("click", "li", function () {
+//         let code = $(this).data("code");
+//         let mask = $(this).data("mask");
+//         let placeholder = $(this).data("placeholder");
+
+//         applyMask(mask, placeholder, code);
+//         countryList.hide(100);
+//     });
+    
+// });
+
+let phoneInput = $("#phone");
+    let countryBtn = $("#country-btn span:first-child");
     let countryList = $("#country-list");
 
-    function applyMask(mask, placeholder, code) {
-        phoneInput.val("").attr("placeholder", placeholder).inputmask(mask);
-        countryBtn.text(code); // Tugmachadagi mamlakat kodini yangilash
-    }
+    // JSON fayldan davlatlarni yuklash
+    $.getJSON("countries.json", function (countries) {
+        countryList.empty();
+        countries.forEach(country => {
+            countryList.append(`<li data-code="${country.code}" data-mask="${country.mask}" data-placeholder="${country.placeholder}">${country.name} (+${country.mask.split(" ")[0].replace("+", "")})</li>`);
+        });
 
-    // Boshlang'ich maska (Qozog‘iston)
-    applyMask("+7 999 999 99 99", "+7 771 000 9998", "KZ");
+        function applyMask(mask, placeholder, code) {
+            phoneInput.val("").attr("placeholder", placeholder).inputmask(mask);
+            countryBtn.text(code);
+        }
 
-    $("#country-btn").click(function () {
-        countryList.slideToggle();
-    });
+        applyMask("+998 99 999 99 99", "+998 90 123 45 67", "UZ");
 
-    countryList.on("click", "li", function () {
-        let code = $(this).data("code");
-        let mask = $(this).data("mask");
-        let placeholder = $(this).data("placeholder");
+        $("#country-list li").on("click", function () {
+            let mask = $(this).data("mask");
+            let placeholder = $(this).data("placeholder");
+            let code = $(this).data("code").toUpperCase();
+            applyMask(mask, placeholder, code);
+        });
 
-        applyMask(mask, placeholder, code);
-        countryList.hide(100);
-    });
-    
-});
+        $("#country-btn").on("click", function () {
+            countryList.toggle();
+        });
+
+        $(document).on("click", function (e) {
+            if (!$(e.target).closest(".custom-phone-input").length) {
+                countryList.hide();
+            }
+        });
+
+        phoneInput.inputmask("+998 99 999 99 99");
+    })
+    })
 let autoPlay; // Timeoutni saqlash uchun
 
 function activateAccordion(index) {
@@ -291,6 +330,4 @@ activateAccordion(0);
 $(".accardion_header").on("click", function () {
     let index = $(this).parent().index();
     activateAccordion(index); // Tanlangan joydan davom etadi
-});
-   
-
+}); 
