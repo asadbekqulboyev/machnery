@@ -565,8 +565,8 @@ header .header_right select {
 }
 
 .hero .blue_btn:hover {
-  background-color: #254982;
-  color: #fff;
+  background-color: #fff;
+  color: #254982;
 }
 
 .project {
@@ -790,13 +790,18 @@ main {
     padding: 12px;
   }
 }
-
-.opportunity .nav a.active,
 .opportunity .nav a:hover {
+  background: #25498210;
+}
+
+.opportunity .nav a.active {
   background: #254982;
   color: #fff;
 }
-
+.opportunity .nav a.active:hover{
+  background: #254982;
+  color: #fff;
+}
 .opportunity .tab-content {
   padding: 32px 32px 32px 64px;
   border-radius: 12px;
@@ -1060,7 +1065,7 @@ main {
   }
 }
 
-.about .partner_countries a {
+.about .partner_countries a, .about .partner_countries span {
   display: flex;
   align-items: center;
   padding: 8px 16px;
@@ -1075,9 +1080,13 @@ main {
   line-height: 120%;
   letter-spacing: -0.28px;
   border-radius: 4px;
+  cursor: pointer;
   border: 1px solid #254982;
+  transition: all .3s linear;
 }
-
+.about .partner_countries span:hover {
+opacity: .5;
+}
 @media (max-width:768px) {
   .about .partner_countries a {
     font-size: 12px;
@@ -1333,12 +1342,14 @@ main {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  transition: all .2s linear;
+  transition: all .3s linear;
+  border: 1px solid transparent;
 }
 
 .team_intro .button:hover {
   color: #fff;
-  background: linear-gradient(90deg, #152261 6%, #AE1B1E 68%, #FC9F32 100%);
+  background:transparent;
+  border-color: #fff;
 }
 
 .news {
@@ -1365,7 +1376,6 @@ main {
 }
 
 .news .news_description {
-  padding-top: 16px;
   line-height: 140%;
   max-width: 615px;
 }
@@ -1391,12 +1401,20 @@ main {
   gap: 8px;
   justify-content: center;
   margin-top: 24px;
-  transition: all .2s linear;
+  transition: all .3s linear;
+  border: 1px solid transparent;
 }
-
+.news .button svg path{
+  transition: all .3s linear;
+}
 .news .button:hover {
-  background: linear-gradient(247deg, #254982 0%, #020126 87.79%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+  background:#fff;
+  color: #254982;
+  border-color: #254982;
 
+}
+.news .button:hover svg path{
+stroke: #254982;
 }
 
 @media (max-width:768px) {
@@ -1518,6 +1536,22 @@ main {
   margin-top: 140px;
 
 }
+.about_products .swiper-pagination-bullet {
+  bottom: 20px;
+  width: 14px;
+  height: 14px; 
+  border:1px solid #fff;
+  background: transparent;
+  opacity: 1;
+  transition: all 0.3s linear;
+  position: relative;
+}
+
+.about_products .swiper-pagination-bullet-active {
+  border-color: #fff;
+  transform: scale(1.01);
+  background-color: #ddd;
+}
 
 @media (max-width:992px) {
   .about_products {
@@ -1615,6 +1649,7 @@ main {
   margin-top: 24px;
   transition: all .2s linear;
   border: 1px solid transparent;
+  color: #254982;
 }
 
 .about_products .button:hover {

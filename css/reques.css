@@ -86,6 +86,7 @@ text-align: left;
     display: flex;
     align-items: center;
     gap: 5px;
+    color: #254982;
 }
 @media (max-width:1024px) {
     .request .request_link{
